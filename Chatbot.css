@@ -1,0 +1,195 @@
+/* src/Chatbot.css - Themed for Shifa Hospital (Glassy Dark Mode) */
+
+/* NOTE: Global variables from Homepage/Login CSS must be available in the root */
+
+/* ========================================================= */
+/* 1. FULL PAGE CHAT STYLING (For Chatbot.js component)     */
+/* ========================================================= */
+
+.full-chat-area {
+    /* Full-page view mein, yeh wrapper main content area ko fill karega */
+    display: flex;
+    flex-direction: column;
+    /* Height adjust karein taki yeh page mein fit ho sake */
+    height: calc(100vh - 120px);
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto;
+
+    /* Applying the glassy dark theme to the whole chat window */
+    background: var(--inner-container-bg);
+    backdrop-filter: blur(8px);
+    border-radius: 15px;
+    /* Box shadow updated to match the primary blue theme */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7),
+        0 0 25px var(--color-primary-blue);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+/* Header style for the Full-Page Chat (Blue Gradient) */
+.full-page-header {
+    background: rgb(18, 168, 255);
+    color: white;
+    padding: 20px;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    /* Border in secondary red */
+    border-bottom: 2px solid var(--color-secondary-red);
+}
+
+/* ========================================================= */
+/* 2. CHAT CONTENT & MESSAGING STYLING (Common to both UIs)  */
+/* ========================================================= */
+
+.chat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Custom Scrollbar */
+.chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary-blue);
+    border-radius: 10px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    /* Thoda halka background track */
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 18px;
+    max-width: 85%;
+    font-size: 0.95em;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+/* User Message (Secondary Red) */
+.message.user {
+    align-self: flex-end;
+    background: var(--color-secondary-red);
+    color: white;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 2px 8px rgba(243, 0, 4, 0.3);
+}
+
+/* Bot Message (Primary Blue/Dark Blue) */
+.message.bot {
+    align-self: flex-start;
+    /* Darker blue shade, same as inner container background but slightly darker */
+    background: rgba(40, 60, 150, 0.7);
+    color: var(--color-text-light);
+    border-bottom-left-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+.message.bot.loading {
+    font-style: italic;
+    opacity: 0.7;
+    color: var(--color-primary-blue);
+}
+
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.chat-input-area input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    /* Input background thoda transparent */
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border-radius: 20px;
+    margin-right: 10px;
+    transition: background 0.3s;
+}
+
+.chat-input-area input:focus {
+    outline: none;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* Send Button (Primary Blue) */
+.chat-input-area button {
+    background: var(--color-primary-blue);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.chat-input-area button:hover {
+    background: #50b0ff;
+    transform: translateY(-1px);
+}
+
+.chat-input-area button:disabled {
+    background: #333;
+    cursor: not-allowed;
+    transform: none;
+}
+
+
+/* ========================================================= */
+/* 3. BOOK APPOINTMENT CTA STYLING                           */
+/* ========================================================= */
+
+.book-now-container {
+    padding: 15px;
+    background-color: var(--inner-container-bg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.book-now-btn {
+    /* 🔴 Red color for strong CTA matching the theme */
+    background-color: var(--color-secondary-red);
+    color: white;
+    font-size: 1.1em;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(243, 0, 4, 0.4);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-now-btn:hover {
+    background-color: #e63946;
+    /* Slightly lighter red on hover */
+    transform: translateY(-2px);
+}
+
+
+/* ========================================================= */
+/* 4. WIDGET MODE (If you decide to use floating widget later) */
+/* ========================================================= */
+
+.chatbot-widget {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 380px;
+    height: 520px;
+    /* Uses the shared .full-chat-area styles for the look */
+    z-index: 1000;
+    /* Remove any specific conflicting styles if the .full-chat-area styles are applied to it */
+}

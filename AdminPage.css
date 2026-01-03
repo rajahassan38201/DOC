@@ -1,0 +1,85 @@
+/* Admin Specific Styles */
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.admin-table th, .admin-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(64, 169, 255, 0.2);
+}
+
+.admin-table th {
+    background-color: var(--color-primary-blue);
+    color: white;
+}
+
+.time-input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid var(--color-primary-blue);
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.status-badge {
+    background: var(--color-secondary-red);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8em;
+    color: white;
+}
+.admin-slot-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+.mini-slot-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    background: #e3f2fd;
+    border: 1px solid #2196f3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.mini-slot-btn:hover {
+    background: #2196f3;
+    color: white;
+}
+.reschedule-box {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+}
+.admin-slot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+    margin-top: 15px;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.mini-slot-btn {
+    background-color: #ffffff;
+    border: 1px solid #007bff;
+    color: #007bff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.mini-slot-btn:hover {
+    background-color: #007bff;
+    color: white;
+}

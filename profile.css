@@ -1,0 +1,287 @@
+/* src/Profile.css */
+
+/* --- Global Variables (Consistency with Homepage - White Theme) --- */
+:root {
+    --color-primary-blue: #40a9ff;
+    /* Standard Blue */
+    --color-secondary-red: #f30004;
+    /* Standard Red/CTA */
+    --color-text-dark: #333333;
+    /* New: Dark text for white background */
+    --color-text-light: #e0e0e0;
+    /* Light gray text (used for accents/buttons) */
+
+    --base-light-color: #ffffff;
+    /* New: Pure white base */
+    --card-bg-light: rgba(255, 255, 255, 0.7);
+    /* Slightly translucent white card */
+    --input-bg-light: #f5f5f5;
+    /* Very light gray input field */
+    --border-subtle-light: #cccccc;
+    /* Subtle border color for light theme */
+}
+
+/* --- Base Layout --- */
+.profile-page-container {
+    padding: 60px 5%;
+    /* FIX 1: Base background set to white (Homepage) */
+    background-color: var(--base-light-color);
+    min-height: 100vh;
+    /* FIX 2: Text color set to dark for visibility on white background */
+    color: var(--color-text-dark);
+    font-family: Arial, sans-serif;
+}
+
+.profile-header {
+    color: var(--color-primary-blue);
+    /* Blue accent */
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    /* Blue glow effect (retains high-tech feel) */
+    text-shadow: 0 0 10px rgba(64, 169, 255, 0.5);
+}
+
+.profile-content-grid {
+    display: grid;
+    /* Grid layout matching the requirement: View (smaller) | Edit (larger) */
+    grid-template-columns: 1fr 1.5fr;
+    gap: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* --- Profile Card Styling (Both Boxes) --- */
+.profile-card {
+    /* FIX 3: Card background is now light translucent */
+    background-color: var(--card-bg-light);
+    padding: 35px;
+    border-radius: 15px;
+    /* Glassy/Subtle Shadow: Kept theme-based blue/red glow */
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.1),
+        /* Lighter drop shadow for light theme */
+        0 0 10px rgba(64, 169, 255, 0.3);
+    /* Blue outer glow */
+    /* FIX 4: Subtle border color changed for light theme */
+    border: 1px solid var(--border-subtle-light);
+    transition: all 0.3s ease;
+    /* Glassy effect */
+    backdrop-filter: blur(5px);
+}
+
+/* --- View Mode (Left Box) Styling --- */
+.view-mode {
+    text-align: center;
+}
+
+.profile-avatar {
+    margin-bottom: 30px;
+}
+
+.profile-avatar svg {
+    /* Red Accent for the profile icon */
+    color: var(--color-secondary-red);
+    margin-bottom: 10px;
+}
+
+.user-name-display {
+    /* FIX 5: Name is now Dark Text on light background */
+    color: var(--color-text-dark);
+    font-size: 2rem;
+    margin: 5px 0 5px 0;
+    /* Removed red text-shadow to avoid conflict with light background */
+    text-shadow: none;
+}
+
+.member-since {
+    font-size: 0.9rem;
+    color: #8899a8;
+}
+
+.profile-details {
+    text-align: left;
+    margin-top: 25px;
+    /* FIX 6: Border color changed for light theme */
+    border-top: 2px dashed var(--border-subtle-light);
+    padding-top: 25px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very faint separator */
+}
+
+.detail-label {
+    font-weight: 600;
+    color: var(--color-primary-blue);
+}
+
+.detail-value {
+    /* FIX 7: Detail values are dark text */
+    color: var(--color-text-dark);
+}
+
+.edit-toggle-btn {
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: var(--color-secondary-red);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    /* CTA Shadow matching Homepage */
+    box-shadow: 0 5px 20px rgba(255, 77, 79, 0.6);
+}
+
+.edit-toggle-btn:hover {
+    background-color: #e63946;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 25px rgba(255, 77, 79, 0.9);
+    /* Stronger red glow on hover */
+}
+
+
+/* --- Edit Mode (Right Box) Styling --- */
+.edit-header {
+    color: var(--color-primary-blue);
+    /* Primary blue */
+    /* FIX 8: Border color changed for light theme */
+    border-bottom: 1px solid var(--border-subtle-light);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.edit-form .form-group {
+    margin-bottom: 25px;
+}
+
+.edit-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    /* FIX 9: Label color is dark text */
+    color: var(--color-text-dark);
+}
+
+.edit-form input,
+.edit-form select {
+    width: 100%;
+    padding: 12px;
+    /* FIX 10: Input background is light gray */
+    background-color: var(--input-bg-light);
+    /* FIX 11: Input border is light subtle */
+    border: 1px solid var(--border-subtle-light);
+    /* FIX 12: Input text is dark */
+    color: var(--color-text-dark);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.edit-form input:focus,
+.edit-form select:focus {
+    border-color: var(--color-primary-blue);
+    outline: none;
+    /* Blue focus glow */
+    box-shadow: 0 0 10px rgba(64, 169, 255, 0.8);
+}
+
+.edit-prompt {
+    font-style: italic;
+    color: #8899a8;
+    padding: 50px 0;
+    text-align: center;
+    /* FIX 13: Border color changed for light theme */
+    border: 1px dashed var(--border-subtle-light);
+    border-radius: 5px;
+    /* FIX 14: Lighter background color */
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Form Action Buttons */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.save-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 1em;
+}
+
+.save-btn {
+    /* Primary Action - Blue */
+    background-color: var(--color-primary-blue);
+    /* FIX 15: Text is dark for contrast on blue */
+    color: var(--color-text-dark);
+    /* Blue button shadow */
+    box-shadow: 0 4px 15px rgba(64, 169, 255, 0.4);
+}
+
+.save-btn:hover {
+    background-color: #1890ff;
+    box-shadow: 0 0 20px rgba(64, 169, 255, 0.8);
+    /* Stronger blue glow on hover */
+}
+
+.cancel-btn {
+    /* Secondary Action - Darker/Subtle */
+    /* FIX 16: Background is now light subtle */
+    background-color: var(--border-subtle-light);
+    /* FIX 17: Text is dark */
+    color: var(--color-text-dark);
+}
+
+.cancel-btn:hover {
+    background-color: #bbbbbb;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .profile-content-grid {
+        grid-template-columns: 1fr;
+        /* Stack columns on smaller screens */
+        gap: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        font-size: 2rem;
+    }
+
+    .profile-page-container {
+        padding: 30px 4%;
+    }
+
+    .profile-card {
+        padding: 20px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .save-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

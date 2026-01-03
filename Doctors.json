@@ -1,0 +1,72 @@
+[
+  {
+    "name": "Dr. Ahmed Khan",
+    "role": "Cardiologist",
+    "symptoms": ["chest pain", "shortness of breath", "high blood pressure", "palpitations", "irregular heartbeat", "heart failure", "cholesterol issues"],
+    "availability": "Monday: 10:00 AM - 4:00 PM | Wednesday: 1:00 PM - 5:00 PM (OPD)",
+    "contact": "Ext 201"
+  },
+  {
+    "name": "Dr. Sarah Ali",
+    "role": "Pediatrician",
+    "symptoms": ["fever in children", "rash", "vaccinations", "child development issues", "stomach bug in kids", "infant care", "child cough"],
+    "availability": "Tuesday: 9:00 AM - 1:00 PM | Friday: 11:00 AM - 3:00 PM",
+    "contact": "Ext 202"
+  },
+  {
+    "name": "Dr. Zeeshan Butt",
+    "role": "Dermatologist",
+    "symptoms": ["acne", "eczema", "skin irritation", "hair loss", "fungal infections", "moles check", "psoriasis", "allergies", "wart removal"],
+    "availability": "Daily: 2:00 PM - 6:00 PM (Saturday OFF)",
+    "contact": "Ext 203"
+  },
+  {
+    "name": "Dr. Faiza Malik",
+    "role": "Neurologist",
+    "symptoms": ["severe headaches", "migraine", "dizziness", "seizures", "numbness or tingling", "stroke symptoms", "tremors", "sleep disorders"],
+    "availability": "Monday, Tuesday, Thursday: 9:30 AM - 1:30 PM",
+    "contact": "Ext 204"
+  },
+  {
+    "name": "Dr. Imran Hashmi",
+    "role": "Orthopedic Surgeon",
+    "symptoms": ["broken bones", "joint pain", "back injury", "sports injuries", "arthritis", "ligament tear", "knee replacement", "shoulder pain"],
+    "availability": "Tuesday, Thursday: 4:00 PM - 8:00 PM | Saturday: 10:00 AM - 1:00 PM",
+    "contact": "Ext 205"
+  },
+  {
+    "name": "Dr. Ayesha Saeed",
+    "role": "Gastroenterologist",
+    "symptoms": ["abdominal pain", "acid reflux", "bloating", "chronic diarrhea", "liver issues", "stomach ulcers", "constipation", "IBS", "colonoscopy"],
+    "availability": "Wednesday, Friday: 8:00 AM - 12:00 PM | Sunday: 10:00 AM - 2:00 PM",
+    "contact": "Ext 206"
+  },
+  {
+    "name": "Dr. Sajjad Hussain",
+    "role": "General Physician (GP)",
+    "symptoms": ["common cold", "flu symptoms", "mild fever", "routine check-up", "general sickness", "sore throat", "fatigue", "body ache"],
+    "availability": "Monday to Friday: 8:00 AM - 4:00 PM (Walk-in)",
+    "contact": "Ext 100"
+  },
+  {
+    "name": "Dr. Nazia Kamal",
+    "role": "Ophthalmologist",
+    "symptoms": ["blurred vision", "eye pain", "cataracts", "red eyes", "vision changes", "glaucoma check", "dry eyes"],
+    "availability": "Monday, Wednesday, Friday: 3:00 PM - 7:00 PM",
+    "contact": "Ext 207"
+  },
+  {
+    "name": "Dr. Zafar Iqbal",
+    "role": "Urologist",
+    "symptoms": ["urinary tract infection (UTI)", "kidney stones", "bladder pain", "blood in urine", "prostate issues"],
+    "availability": "Tuesday: 1:00 PM - 5:00 PM | Thursday: 9:00 AM - 1:00 PM",
+    "contact": "Ext 208"
+  },
+  {
+    "name": "Dr. Hina Shahid",
+    "role": "Gynecologist",
+    "symptoms": ["pregnancy check-up", "menstrual issues", "PCOS", "pelvic pain", "contraception advice", "fertility issues"],
+    "availability": "Monday, Wednesday, Friday: 10:00 AM - 2:00 PM",
+    "contact": "Ext 209"
+  }
+]
